@@ -1,0 +1,66 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <h1>Select Category to buy Products</h1>
+</div>
+<form action="categoryselected">
+<div class="container" style=" height:auto" >
+    <div class="row text-center">
+        <div class="col-sm-4" >
+            <button class="btn btn-link" value="vegetables" name="category" href="products"><img class="image-fluid" width="300px" style="border:4px solid green ; radius:5px" height="200px" src="{% static 'img/vegetables.jfif' %}" >
+            <div class="carousel-caption mt-4 ">
+                <h2 style="color:black">Vegetables</h2>
+
+            </div>
+            </button>
+        </div>
+        <div class="col-sm-4" >
+            <button class="btn btn-link" value="fruits" name="category"><img class="image-fluid" width="300px" style="border:4px solid green ; radius:5px" height="200px" src="{% static 'img/fruits.jfif' %}" >
+            <div class="carousel-caption mt-4 ">
+                <h2 style="color:black">Fruits</h2>
+
+            </div>
+            </button>
+        </div>
+        <div class="col-sm-4" >
+            <button class="btn btn-link" value="deepfreezed" name="category"><img class="image-fluid" width="300px" style="border:4px solid green ; radius:5px" height="200px" src="{% static 'img/dairy.jfif' %}" >
+            <div class="carousel-caption mt-4 ">
+                <h2 style="color:black">Dairy Products</h2>
+
+            </div>
+            </button>
+        </div>
+        </div>
+    <br>
+        <div class="row text-center">
+        <div class="col-sm-4" >
+            <button class="btn btn-link" value="bakery" name="category"><img class="image-fluid" width="300px" style="border:4px solid green ; radius:5px" height="200px" src="{% static 'img/bakery.jpg' %}" >
+            <div class="carousel-caption mt-4 ">
+                <h2 style="color:black">Bakery Products</h2>
+
+            </div>
+            </a>
+
+        </div>
+        <div class="col-sm-4" >
+            <button class="btn btn-link" value="deepfreezed" name="category"><img class="image-fluid" width="300px" style="border:4px solid green ; radius:5px" height="200px" src="{% static 'img/deepfreezed.jpg' %}" >
+            <div class="carousel-caption mt-4 ">
+                <h2 style="color:black">Frozen Products</h2>
+
+            </div>
+            </button>
+        </div>
+        <div class="col-sm-4" >
+            <button class="btn btn-link" value="grocery" name="category"><img class="image-fluid" width="300px" style="border:4px solid green ; radius:5px" height="200px" src="{% static 'img/grocery.jfif' %}" >
+            <div class="carousel-caption mt-4 ">
+                <h2 style="color:black">Grocery</h2>
+
+            </div>
+            </button>
+        </div>
+    </div>
+</div>
+</form>
+{% endblock %}

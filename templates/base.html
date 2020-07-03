@@ -1,0 +1,143 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="{% static 'img/fav.png' %}">
+    <!-- Author Meta -->
+    <meta name="author" content="colorlib">
+    <!-- Meta Description -->
+    <meta name="description" content="">
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="">
+    <!-- meta character set -->
+    <meta charset="UTF-8">
+    <!-- Site Title -->
+    <title>Macro</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+    <!--
+    CSS
+    ============================================= -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+
+
+</head>
+<body style="background-color:#FFC7BA">
+    <div class="container">
+        <div class="row">
+            <div class="col-3 col-sm-3">
+                <img src="{% static 'img/logod2d.png' %}" height="100" width="170">
+            </div>
+
+            <div class="col-2 col-sm-2 offset-sm-7 offset-4">
+                <a type="button" href="cart"  class="btn btn-primary mt-4">
+                 Cart <span class="badge badge-light"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark ">
+            <a class="navbar-brand" href="home">
+            <img src="{% static 'img/logod2d.png' %}" width="45" height="45" alt="" loading="lazy">
+            Essentials at your doorstep!</a>
+             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarmenu" aria-controls="navbarmenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+          <div class="collapse navbar-collapse" id="navbarmenu">
+            <ul class="navbar-nav ml-auto  " >
+              <li class="nav-item active">
+                <a class="nav-link" href="home">Home <span class="sr-only">(current)</span></a>
+              </li>
+              {% if user.is_authenticated %}
+              <li> <h5 style="color:white">Hi, {{user.username}}</h5></li>
+              <li class="nav-item active">
+                <a class="nav-link" href="logout">Logout <span class="sr-only">(current)</span></a>
+              </li>
+              {% else %}
+              <li class="nav-item active">
+                <a class="nav-link" href="login">Login <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="register">Register <span class="sr-only">(current)</span></a>
+              </li>
+              {% endif %}
+            </ul>
+
+          </div>
+
+        </nav>
+    </div>
+{% block content %}
+{% endblock %}
+    <div class="container-fluid" style="background-color:brown">
+    <div class="container">
+        <div class="row" style="color:white">
+        <div class="col-xl-2 col-6 ">
+            <h4>Days</h4>
+                <ul class="hr-list">
+                    <li class="d-flex  justify">
+                        <span>Monday - Friday:</span>
+                    </li>
+                    <li class="d-flex ">
+                        <span>Saturday  :</span>
+                    </li>
+                    <li class="d-flex ">
+                        <span>Sunday  :</span>
+                    </li>
+                </ul>
+        </div>
+
+        <div class="col-xl-3 col-6 ">
+            <h4>Opening Hours</h4>
+                <ul class="hr-list">
+                    <li class="d-flex  justify">
+                        <span >08.00am-10.00pm</span>
+                    </li>
+                    <li class="d-flex ">
+                         <span>08.00am-10.00pm</span>
+                    </li>
+                    <li class="d-flex ">
+                        <span>08.00am-10.00pm</span>
+                    </li>
+                </ul>
+        </div>
+        <div class="col-xl-3"></div>
+        <div class="col-xl-4">
+            <h4>Contact Us:</h4>
+                <ul class="hr-list">
+                    <li class="d-flex  justify">
+                        <span >+91 9592146867</span>
+                    </li>
+                    <li class="d-flex ">
+                         <span>+91 7009723699</span>
+                    </li>
+
+                </ul>
+        </div>
+
+        </div>
+
+    </div>
+    </div>
+<script src="{% static 'js/vendor/jquery-2.2.4.min.js' %}"></script>
+			<script src="{% static 'js/popper.min.js' %}"></script>
+			<script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
+			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+ 			<script src="{% static 'js/jquery-ui.js' %}"></script>
+  			<script src="{% static 'js/easing.min.js' %}"></script>
+			<script src="{% static 'js/hoverIntent.js' %}"></script>
+			<script src="{% static 'js/superfish.min.js' %}"></script>
+			<script src="{% static 'js/jquery.ajaxchimp.min.js' %}"></script>
+			<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+			<script src="{% static 'js/jquery.nice-select.min.js' %}"></script>
+			<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+            <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+			<script src="{% static 'js/mail-script.js' %}"></script>
+			<script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

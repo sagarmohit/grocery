@@ -1,0 +1,46 @@
+
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container ju">
+    <h1>My Cart</h1>
+
+</div>
+<div class="container">
+    <form action="deleteitem">
+     <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">S.No</th>
+              <th scope="col">Products</th>
+              <th scope="col">Amount</th>
+
+              <th scope="col">Price</th>
+
+            </tr>
+          </thead>
+          <tbody>
+
+          {% for product in myproducts %}
+
+            <tr>
+              <th scope="row">{{ forloop.counter }}</th>
+              <td>{{product.name}} <button class="btn btn-link" name="deleteitem" value="{{product.productcode}}" >[Delete]</button></td>
+              <td>{{product.amount}}</td>
+
+              <td>{{product.price}}</td>
+            </tr>
+
+          {% endfor %}
+           <tr>
+              <th scope="row" style="text-align:right" colspan="3">Total:</th>
+              <th>{{totalprice}}</th>
+
+            </tr>
+          </tbody>
+     </table>
+    </form>
+
+</div>
+
+{% endblock %}
